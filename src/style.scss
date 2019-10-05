@@ -1,3 +1,258 @@
+@import './materialize/materialize';
+@import "smart-grid";
+
+@font-face {
+  font-family: "Gordita";
+  src: url("~/fotns/Gordita-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src: url("~/fotns/Gordita-Medium.otf") format("otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gordita";
+  src: url("~/fotns/Gordita-Bold.otf") format("otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
 body {
-  background-color: red;
+  font-family: "Gordita", sans-serif;
+  font-size: 16px;
+}
+
+.preload-site {
+  position: fixed;
+  top: 50%;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.preload {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  left: 0%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.container {
+  @include wrapper;
+}
+
+.row {
+  @include row-flex;
+}
+
+.first {
+  background: url('./img/bg.jpg') no-repeat;
+  background-size: cover;
+  padding-bottom: 110px;
+  .block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 130px;
+
+    & > * {
+      align-self: center;
+    }
+  }
+
+  .icon-1 {
+    margin-right: 50px;
+  }
+
+  .title {
+    max-width: 979px;
+    font-weight: bold;
+    font-size: 39px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 83px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text-1 {
+    max-width: 247px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    color: #FFFFFF;
+    margin-top: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .text-2 {
+    max-width: 315px;
+    font-weight: 500;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 10px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+}
+
+.offer {
+  padding-top: 100px;
+  padding-bottom: 150px;
+
+  .title {
+    max-width: 841px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+    color: #15254B;
+    margin-bottom: 30px;
+  }
+
+  .col {
+    @include col();
+    @include size(6);
+    @include size-sm(12);
+  }
+
+  .item {
+    list-style: none;
+    margin-bottom: 40px;
+    max-width: 476px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #3C5D72;
+
+    &:before {
+      content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      color: #3C5D72; /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+  }
+}
+
+.meet {
+  padding-bottom: 100px;
+
+  .title {
+    max-width: 841px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+    color: #15254B;
+    margin-bottom: 30px;
+  }
+
+  .quest {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #15254B;
+    margin-bottom: 15px;
+  }
+
+  .radio {
+    display: block;
+
+    span {
+      color: #3C5D72;
+    }
+
+  }
+  
+  .col {
+    @include col();
+    @include size(6);
+    @include size-md(12);
+    padding-bottom: 30px;
+
+    &-bg {
+      background-color: #F2F5F9;
+      padding: 75px 50px;
+
+      .desc{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: #15254B;
+      }
+    }
+  }
+
+}
+
+.mb {
+  margin-bottom: 45px;
+}
+
+.form-b{
+  background-color: #0275D8;
+  font-family: "Gordita", sans-serif;
+  
+  &:hover {
+    background-color: #0043d8;
+  }
+}
+
+.footer {
+  .col {
+    @include col();
+    @include size(6);
+    @include size-md(12);
+  }
+
+  .title {
+    max-width: 841px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 120%;
+    color: #15254B;
+    margin-bottom: 30px;
+  }
+
+  .text {
+    font-size: 20px;
+    line-height: 31px;
+    color: #3C5D72;
+  }
+
+  .text-1 {
+    margin-bottom: 30px;
+
+    a {
+      display: block;
+      margin-bottom: 5px;
+      color: #15254B;
+      &:hover {
+        color: #0275D8;
+      }
+    }
+  }
+
+  .soc {
+    a{
+      margin-left: 5px;
+    }
+
+    svg:hover path{
+      fill: #0275D8;
+    }
+  }
 }

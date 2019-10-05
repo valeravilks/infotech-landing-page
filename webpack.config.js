@@ -7,8 +7,7 @@ let conf = {
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, './dist/'),
-        filename: 'script.js',
-        publicPath: "dist"
+        filename: 'script.js'
     },
     plugins: [
         new MiniCssExtractPlugin({

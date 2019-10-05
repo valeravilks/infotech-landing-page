@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="329e8a9a-f7da-4912-baaf-092845f36e17" name="infotech_lend" url="http://vh132.timeweb.ru">
+        <fileTransfer host="vh132.timeweb.ru" port="21" rootFolder="/infotech/public_html/lend">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
