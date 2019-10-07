@@ -17,5 +17,13 @@ $message .= "</table>";
 $message .= "</body></html>";
 
 
+$mail['from'] = "Выставка «Электросети» <ck17625@vh132.timeweb.ru>"; // От кого
 
-mail("valeravilks@gmail.com", "Заявка с лендинга Infotech", $message, "Content-Type: text/html; charset=ISO-8859-1\r\n");
+$mail['header'] = "MIME-Version: 1.0\n"
+    ."From: " . $mail['from'] . "\n"
+    ."X-Priority: 3\n"
+    ."X-Mailer: Mailer\n"
+    ."Content-Transfer-Encoding: 8bit\n"
+    ."Content-Type: text/html; charset=ISO-8859-1\n";
+
+mail("valeravilks@gmail.com", "Заявка с лендинга Infotech", $message, $mail['header']);
