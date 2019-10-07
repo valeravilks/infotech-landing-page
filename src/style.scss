@@ -56,7 +56,8 @@ body {
 .first {
   background: url('./img/bg.jpg') no-repeat;
   background-size: cover;
-  padding-bottom: 110px;
+  padding-bottom: 40px;
+
   .block {
     display: flex;
     flex-wrap: wrap;
@@ -106,6 +107,11 @@ body {
     margin-top: 10px;
     color: #FFFFFF;
     text-align: center;
+  }
+
+  .svg {
+    margin-top: 30px;
+    width: 100%;
   }
 }
 
